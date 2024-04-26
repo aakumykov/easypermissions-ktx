@@ -22,11 +22,11 @@ import android.util.Log
 import android.widget.Toast
 import android.widget.Toast.LENGTH_LONG
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_main.*
+import com.vmadalin.easypermissions.EasyPermissions
 import com.vmadalin.easypermissions.annotations.AfterPermissionGranted
 import com.vmadalin.easypermissions.dialogs.DEFAULT_SETTINGS_REQ_CODE
 import com.vmadalin.easypermissions.dialogs.SettingsDialog
-import com.vmadalin.easypermissions.EasyPermissions
+import kotlinx.android.synthetic.main.activity_main.*
 
 private const val TAG = "MainActivity"
 private const val REQUEST_CODE_CAMERA_PERMISSION = 123
@@ -127,7 +127,7 @@ class MainActivity : AppCompatActivity(),
     private fun onClickRequestPermissionCameraButton() {
         if (hasCameraPermission()) {
             // Have permission, do things!
-            Toast.makeText(this, "TODO: Camera things", LENGTH_LONG).show()
+            Toast.makeText(this, getString(R.string.TODO_camera_things), LENGTH_LONG).show()
         } else {
             // Ask for one permission
             EasyPermissions.requestPermissions(
@@ -143,7 +143,7 @@ class MainActivity : AppCompatActivity(),
     private fun onClickRequestPermissionStorageButton() {
         if (hasCameraPermission()) {
             // Have permission, do things!
-            Toast.makeText(this, "TODO: Storage things", LENGTH_LONG).show()
+            Toast.makeText(this, getString(R.string.TODO_storage_things), LENGTH_LONG).show()
         } else {
             // Ask for one permission
             EasyPermissions.requestPermissions(
@@ -159,7 +159,7 @@ class MainActivity : AppCompatActivity(),
     private fun onClickRequestPermissionLocationAndContactsButton() {
         if (hasLocationAndContactsPermissions()) {
             // Have permissions, do things!
-            Toast.makeText(this, "TODO: Location and Contacts things", LENGTH_LONG).show()
+            Toast.makeText(this, getString(R.string.TODO_location_and_contacts_things), LENGTH_LONG).show()
         } else {
             // Ask for both permissions
             EasyPermissions.requestPermissions(

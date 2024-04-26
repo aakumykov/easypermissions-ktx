@@ -28,5 +28,8 @@
     <string name="log_permissions_denied" translatable="false">onPermissionsDenied::%d:%d</string>
     <string name="log_permission_rationale_accepted" translatable="false">onPermissionRationaleAccepted:%d"</string>
     <string name="log_permission_rationale_denied" translatable="false">onPermissionRationaleDenied:%d"</string>
+    <string name="TODO_camera_things">TODO: Camera things</string>
+    <string name="TODO_storage_things">TODO: Storage things</string>
+    <string name="TODO_location_and_contacts_things">TODO: Location and Contacts things</string>
 
 </resources>

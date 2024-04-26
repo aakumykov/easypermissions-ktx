@@ -18,4 +18,7 @@
     <string name="permission_storage_rationale_message">Чтобы сохранять и редактировать картинки, приложению нужен доступ к хранилищу.</string>
     <string name="permission_location_and_contacts_text">Местоположение и контакты.</string>
     <string name="permission_location_and_contacts_rationale_message">Чтобы знать, кто где, приложению нужен доступ к контактам и GPS.</string>
+    <string name="TODO_camera_things">СДЕЛАТЬ: работа с камерой</string>
+    <string name="TODO_storage_things">СДЕЛАТЬ: работа с хранилищем</string>
+    <string name="TODO_location_and_contacts_things">СДЕЛАТЬ: работа с GPS и контактами</string>
 </resources>
