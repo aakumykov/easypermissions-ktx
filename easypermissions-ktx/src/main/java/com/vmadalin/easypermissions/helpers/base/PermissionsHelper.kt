@@ -59,7 +59,7 @@ abstract class PermissionsHelper<T>(val host: T) {
     // ============================================================================================
 
     fun requestPermissions(permissionRequest: PermissionRequest) {
-        if (shouldShowRationale(permissionRequest.perms)) {
+        if (permissionRequest.hasRationale && shouldShowRationale(permissionRequest.perms)) {
             showRequestPermissionRationale(permissionRequest)
         } else {
             directRequestPermissions(permissionRequest.code, permissionRequest.perms)

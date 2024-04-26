@@ -99,7 +99,7 @@ object EasyPermissions {
     @JvmStatic
     fun requestPermissions(
         host: Activity,
-        rationale: String,
+        rationale: String?,
         requestCode: Int,
         @Size(min = 1) vararg perms: String
     ) {
@@ -119,7 +119,7 @@ object EasyPermissions {
     @JvmStatic
     fun requestPermissions(
         host: Fragment,
-        rationale: String,
+        rationale: String?,
         requestCode: Int,
         @Size(min = 1) vararg perms: String
     ) {

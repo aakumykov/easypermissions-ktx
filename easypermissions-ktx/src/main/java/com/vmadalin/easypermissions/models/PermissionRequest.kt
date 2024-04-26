@@ -35,6 +35,7 @@ data class PermissionRequest(
     var positiveButtonText: String?,
     var negativeButtonText: String?
 ) {
+    val hasRationale: Boolean get() = null != rationale
 
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
@@ -80,7 +81,7 @@ data class PermissionRequest(
         fun theme(@StyleRes theme: Int) = apply { this.theme = theme }
         fun code(code: Int) = apply { this.code = code }
         fun perms(perms: Array<out String>) = apply { this.perms = perms }
-        fun rationale(rationale: String) = apply { this.rationale = rationale }
+        fun rationale(rationale: String?) = apply { this.rationale = rationale }
         fun rationale(@StringRes resId: Int) = apply { this.rationale = context?.getString(resId) }
         fun positiveButtonText(positiveButtonText: String) =
             apply { this.positiveButtonText = positiveButtonText }
