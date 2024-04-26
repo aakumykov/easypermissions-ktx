@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="returned_from_app_settings_to_activity" translatable="false">
+        Возврат в MainActivity с такими разрешениями:
+        \n
+        \Камера: %s
+        \nМестоположение и Контакты: %s
+        \nСМС: %s
+        \nХранилище: %s
+    </string>
+    <string name="yes">Да</string>
+    <string name="no">Нет</string>
+    <string name="permission_camera_text">Камера</string>
+    <string name="permission_camera_rationale_message">Чтобы фотографировать, приложению нужен доступ к камере.</string>
+    <string name="permission_sms_text">СМС</string>
+    <string name="permission_sms_rationale_message">Чтобы прочитать ваши изумительные СМС, приложению нужен доступ к ним.</string>
+    <string name="permission_storage_text">Хранилище</string>
+    <string name="permission_storage_rationale_message">Чтобы сохранять и редактировать картинки, приложению нужен доступ к хранилищу.</string>
+    <string name="permission_location_and_contacts_text">Местоположение и контакты.</string>
+    <string name="permission_location_and_contacts_rationale_message">Чтобы знать, кто где, приложению нужен доступ к контактам и GPS.</string>
+</resources>

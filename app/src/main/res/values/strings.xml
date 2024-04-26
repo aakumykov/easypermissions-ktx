@@ -1,8 +1,8 @@
 <resources>
-    <string name="app_name">Easy Permissions</string>
+    <string name="app_name" translatable="false">Easy Permissions</string>
 
     <!-- MainActivity -->
-    <string name="returned_from_app_settings_to_activity">
+    <string name="returned_from_app_settings_to_activity" translatable="false">
         Returned from app settings to MainActivity with the following permissions:
         \n
         \nCamera: %s
@@ -24,9 +24,9 @@
     <string name="permission_location_and_contacts_rationale_message">This app needs access to your location and contacts to know where and who you are.</string>
 
     <!-- Logs -->
-    <string name="log_permissions_granted">onPermissionsGranted:%d:%d</string>
-    <string name="log_permissions_denied">onPermissionsDenied::%d:%d</string>
-    <string name="log_permission_rationale_accepted">onPermissionRationaleAccepted:%d"</string>
-    <string name="log_permission_rationale_denied">onPermissionRationaleDenied:%d"</string>
+    <string name="log_permissions_granted" translatable="false">onPermissionsGranted:%d:%d</string>
+    <string name="log_permissions_denied" translatable="false">onPermissionsDenied::%d:%d</string>
+    <string name="log_permission_rationale_accepted" translatable="false">onPermissionRationaleAccepted:%d"</string>
+    <string name="log_permission_rationale_denied" translatable="false">onPermissionRationaleDenied:%d"</string>
 
 </resources>
