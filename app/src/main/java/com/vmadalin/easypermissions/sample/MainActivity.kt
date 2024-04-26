@@ -19,8 +19,11 @@ import android.Manifest.permission.*
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.widget.CheckBox
 import android.widget.Toast
 import android.widget.Toast.LENGTH_LONG
+import androidx.annotation.IdRes
+import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
 import com.vmadalin.easypermissions.EasyPermissions
 import com.vmadalin.easypermissions.annotations.AfterPermissionGranted
@@ -132,7 +135,7 @@ class MainActivity : AppCompatActivity(),
             // Ask for one permission
             EasyPermissions.requestPermissions(
                 this,
-                getString(R.string.permission_camera_rationale_message),
+                rationaleIfNeeded(R.id.camera_rationale_disable_checkbox, R.string.permission_camera_rationale_message),
                 REQUEST_CODE_CAMERA_PERMISSION,
                 CAMERA
             )
@@ -148,7 +151,7 @@ class MainActivity : AppCompatActivity(),
             // Ask for one permission
             EasyPermissions.requestPermissions(
                 this,
-                getString(R.string.permission_storage_rationale_message),
+                rationaleIfNeeded(R.id.storage_rationale_disable_checkbox, R.string.permission_storage_rationale_message),
                 REQUEST_CODE_STORAGE_PERMISSION,
                 WRITE_EXTERNAL_STORAGE
             )
@@ -164,7 +167,7 @@ class MainActivity : AppCompatActivity(),
             // Ask for both permissions
             EasyPermissions.requestPermissions(
                 this,
-                getString(R.string.permission_location_and_contacts_rationale_message),
+                rationaleIfNeeded(R.id.location_and_contacts_rationale_disable_checkbox, R.string.permission_location_and_contacts_rationale_message),
                 REQUEST_CODE_LOCATION_AND_CONTACTS_PERMISSION,
                 ACCESS_FINE_LOCATION, READ_CONTACTS
             )
@@ -185,5 +188,11 @@ class MainActivity : AppCompatActivity(),
 
     private fun hasStoragePermission(): Boolean {
         return EasyPermissions.hasPermissions(this, WRITE_EXTERNAL_STORAGE)
+    }
+
+
+    private fun rationaleIfNeeded(@IdRes checkBoxId: Int, @StringRes rationaleStringRes: Int): String? {
+        return if (findViewById<CheckBox>(checkBoxId).isChecked) null
+        else getString(rationaleStringRes)
     }
 }

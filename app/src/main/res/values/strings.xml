@@ -12,6 +12,7 @@
     </string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
+    <string name="disable_rationale">Disable rationale</string>
 
     <!-- Permissions -->
     <string name="permission_camera_text">Camera</string>

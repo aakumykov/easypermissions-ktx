@@ -10,6 +10,7 @@
     </string>
     <string name="yes">Да</string>
     <string name="no">Нет</string>
+    <string name="disable_rationale">Не показывать объяснение</string>
     <string name="permission_camera_text">Камера</string>
     <string name="permission_camera_rationale_message">Чтобы фотографировать, приложению нужен доступ к камере.</string>
     <string name="permission_sms_text">СМС</string>
